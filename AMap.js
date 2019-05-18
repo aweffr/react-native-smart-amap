@@ -5,20 +5,17 @@
  * Copyright (c) 2016 react-native-component <moonsunfall@aliyun.com>
  */
 
-import {
-    Platform,
-} from 'react-native'
+import {Platform} from 'react-native'
 
 import AndroidAMap from './AMap-android'
 import IOSAMap from './AMap-ios'
 
-let AMap
+let AMap;
 
-if(Platform.OS == 'ios') {
-    AMap = IOSAMap
-}
-else {
-    AMap = AndroidAMap
+if (Platform.OS === 'ios') {
+  AMap = IOSAMap
+} else {
+  AMap = AndroidAMap
 }
 
 export default AMap
