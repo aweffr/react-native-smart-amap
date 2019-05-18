@@ -6,7 +6,6 @@
  */
 
 import React, {
-    PropTypes,
     Component,
 } from 'react'
 import {
@@ -16,6 +15,7 @@ import {
     findNodeHandle,
     Platform,
 } from 'react-native'
+import PropTypes from "prop-types";
 
 const AMapManager = Platform.OS == 'ios' ? NativeModules.AMap : null
 
@@ -48,7 +48,7 @@ export default class AMap extends Component {
             }),
             zoomLevel: PropTypes.number,
             centerMarker: PropTypes.string,
-        }).isRequired,
+        }),
         onDidMoveByUser: PropTypes.func,
     }
 
